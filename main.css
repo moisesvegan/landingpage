@@ -1,5 +1,6 @@
 body{
     padding: 1px;
+    font-size: 16px;
 }
 
 .hero-container{
@@ -22,6 +23,13 @@ body{
 .item-A{
     border: 1px solid red;
     grid-area: header;
+    display: flex;
+}
+
+.item-A img{
+    width: 35%;
+    height: 35%;
+    align-self: center;
 }
 
 .item-B{
@@ -50,19 +58,36 @@ body{
     grid-area: form;
 }
 
+.item-C article h1{
+
+font-size: 4rem;
+}
+
+.item-C article span{
+
+}
+
+.item-C form{
+
+}
+
 @media screen and (max-width:768px){
     .hero-container{
         height: 97vh;
     }
     
     .hero{
-      grid-template-columns: 74vh 1fr;
-      grid-template-rows: 15vh 27vh 48vh;
-      grid-gap: 7px;
-      grid-template-areas:
-        "header"
-        "img"
-        "form";
+        grid-template-columns: 74vh 1fr;
+        grid-template-rows: 15vh 27vh 48vh;
+        grid-gap: 7px;
+        grid-template-areas: "header"
+                             "img"
+                             "form";
+    }
+
+    .item-A img{    
+        width: 40%;
+        height: 40%;
     }
 
     .item-B img{
