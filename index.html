@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base apparel</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- loading fonts and style sheet -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="hero-container">
-        <div class="hero">
-            <div class="item-A">
-                <img src="img/logo.svg" alt="">
-            </div>
-            <div class="item-B">
-                <img src="img/hero-desktop.jpg">
-            </div>
-            <div class="item-C">
-                <article>
-                    <h1><span>we're</span><br>coming<br>soon</h1>
-                    <p>Hello fellow shoppers! We're currently building our new<br>fashion store. Add your email below to stay up-to-date with<br>announcements and our launch deals.</p>
-                </article>
-                <form action="">
-                    <input type="email" name="" id="">
-                    <button type="submit">
-                        <img src="img/icon-arrow.svg" alt="">
-                    </button>
-                </form>
-            </div>
+  <main class="grid">
+    <section class="logo">
+      <h2 class="sr-only">logo section</h2>
+      <div class="logo-container">
+        <img src="img/logo.svg" alt="logo">
+      </div>
+    </section>
+    <section class="hero">
+      <h2 class="sr-only">hero section</h2>
+    </section>
+    <section class="comingsoon">
+      <h1 class="text-light">
+        We're
+      </h1>
+      <h1 class="text-bold lh-fix">
+        coming<br/> soon
+      </h1>
+      <h2 class="text-regular">
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </h2>
+      <form class="promotion" id="errorBorder" onsubmit="event.preventDefault(); validateEmail();">
+        <label class="sr-only" for="email">Email</label>
+        <input type="text" id="email" name="email" value="" placeholder="Email Address">
+        <div class="error" id="errorIcon">
+          <img src="img/icon-error.svg" alt="">
         </div>
-    </div>
+        <button class="btn submit">
+          <img src="img/icon-arrow.svg" alt="arrow">
+        </button>
+      </form>
+      <p class="error-msg" id="errorMsg">Please provide a valid email</p>
+    </section>
+  </main>
+  
+  <footer>
+    <p class="sr-only attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/zuolizhu">Connor Zhu</a>.
+    </p>
+  </footer>
+  <!-- js code for form validation -->
+  <script src="app.js"></script>
 </body>
 </html>
